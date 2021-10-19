@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="shopkeeper.js">
+        let employees = [];
+const addEmployee = (ev) => {
+    ev.preventDefault(); //stops form from submitting immediately
+    let employee = {
+        fname: document.getElementById('fname').value,
+        lname: document.getElementById('lname').value,
+        age: document.getElementById('age').value,
+        wage: document.getElementById('wage').value
+    }
+    employees.push(employee);
+    document.querySelector('form').reset();
+
+    console.warn('added', {employees} );
+    let pre = document.querySelector('#msg pre');
+    pre.textContent = '\n' +JSON.stringify(employees, '\t', 2);
+}
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', ()=> {
+    document.getElementById('btn').addEventListener('click', addEmployee);
+});
+    </script>
+</head>
+<body>
+    <form>
+        <div class="formBox">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="First Name"><br>
+        </div>
+        <div class="formBox">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Last Name"><br>
+        </div>
+        <div class="formBox">
+            <label for="age">Age</label>
+            <input type="number" id="age" placeholder="Age"><br>
+        </div>
+        <div class="formBox">
+            <label for="wage">Wage</label>
+            <input type="number"id="wage" placeholder="Wage"><br>
+        </div>
+        <div class="formBox">
+        <button id="submitbtn">Submit</button>
+        </div>
+        <div id="msg">
+            <pre></pre>
+        </div>
+    </form>
+</body>
+</html>
