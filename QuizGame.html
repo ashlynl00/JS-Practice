@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="qg.js">
+    
+    function showCorrectAnswer1() {
+    let showAnswer1 = document.createElement('p')
+    //showAnswer1.innerHTML = 'Show Corrent Answer'
+    showAnswer1.style.position = 'relative'
+    showAnswer1.style.top = '-180px'
+    showAnswer1.style.fontSize = '1.75rem'
+    document.getElementById('showanswer1').appendChild(showAnswer1)
+    showAnswer1.addEventListener('click', () => {
+      document.getElementById('q1').style.border = '3px solid limegreen'
+      document.getElementById('result-12').style.color = 'limegreen'
+      document.getElementById('result-12').innerHTML = 'Correct!'
+      document.getElementById('showanswer1').removeChild(showAnswer1)
+    })
+  }
+
+
+function displayAnswer1() {
+    if (document.getElementById('option-2').checked) {
+        document.getElementById('q1a2').style.border = '3px solid limegreen'
+        document.getElementById('result-12').style.color = 'limegreen'
+        document.getElementById('result-12').innerHTML = 'Correct!'
+    }
+    if (document.getElementById('option-1').checked) {
+        document.getElementById('q1a1').style.border = '3px solid red'
+        document.getElementById('result-11').style.color = 'red'
+        document.getElementById('result-11').innerHTML = 'Incorrect!'
+        showCorrectAnswer1()
+      }
+}
+
+function displayAnswer2() {
+    if (document.getElementById('option-4').checked) {
+        document.getElementById('q2a2').style.border = '3px solid limegreen'
+        document.getElementById('result-22').style.color = 'limegreen'
+        document.getElementById('result-22').innerHTML = 'Correct!'
+    }
+    if (document.getElementById('option-3').checked) {
+        document.getElementById('q2a1').style.border = '3px solid red'
+        document.getElementById('result-21').style.color = 'red'
+        document.getElementById('result-21').innerHTML = 'Incorrect!'
+        showCorrectAnswer2()
+      }
+}
+
+function showCorrectAnswer2() {
+    let showAnswer2 = document.createElement('p')
+    //showAnswer1.innerHTML = 'Show Corrent Answer'
+    showAnswer2.style.position = 'relative'
+    showAnswer2.style.top = '-180px'
+    showAnswer2.style.fontSize = '1.75rem'
+    document.getElementById('showanswer2').appendChild(showAnswer2)
+    showAnswer2.addEventListener('click', () => {
+      document.getElementById('q2').style.border = '3px solid limegreen'
+      document.getElementById('result-22').style.color = 'limegreen'
+      document.getElementById('result-22').innerHTML = 'Correct!'
+      document.getElementById('showanswer2').removeChild(showAnswer2)
+    })
+  }
+
+
+  function displayAnswer3() {
+    if (document.getElementById('option-5').checked) {
+        document.getElementById('q3a1').style.border = '3px solid limegreen'
+        document.getElementById('result-31').style.color = 'limegreen'
+        document.getElementById('result-31').innerHTML = 'Correct!'
+    }
+    if (document.getElementById('option-6').checked) {
+        document.getElementById('q3a2').style.border = '3px solid red'
+        document.getElementById('result-32').style.color = 'red'
+        document.getElementById('result-32').innerHTML = 'Incorrect!'
+        showCorrectAnswer3()
+      }
+}
+
+function showCorrectAnswer3() {
+    let showAnswer3 = document.createElement('p')
+    //showAnswer1.innerHTML = 'Show Corrent Answer'
+    showAnswer3.style.position = 'relative'
+    showAnswer3.style.top = '-180px'
+    showAnswer3.style.fontSize = '1.75rem'
+    document.getElementById('showanswer3').appendChild(showAnswer3)
+    showAnswer3.addEventListener('click', () => {
+      document.getElementById('q3').style.border = '3px solid limegreen'
+      document.getElementById('result-31').style.color = 'limegreen'
+      document.getElementById('result-31').innerHTML = 'Correct!'
+      document.getElementById('showanswer3').removeChild(showAnswer3)
+    })
+  }
+
+
+function displayAnswer4() {
+    if (document.getElementById('option-7').checked) {
+        document.getElementById('q4a1').style.border = '3px solid limegreen'
+        document.getElementById('result-41').style.color = 'limegreen'
+        document.getElementById('result-41').innerHTML = 'Correct!'
+    }
+    if (document.getElementById('option-8').checked) {
+        document.getElementById('q4a2').style.border = '3px solid red'
+        document.getElementById('result-42').style.color = 'red'
+        document.getElementById('result-42').innerHTML = 'Incorrect!'
+        showCorrectAnswer4()
+      }
+}
+
+function showCorrectAnswer4() {
+    let showAnswer4 = document.createElement('p')
+    //showAnswer1.innerHTML = 'Show Corrent Answer'
+    showAnswer4.style.position = 'relative'
+    showAnswer4.style.top = '-180px'
+    showAnswer4.style.fontSize = '1.75rem'
+    document.getElementById('showanswer4').appendChild(showAnswer4)
+    showAnswer4.addEventListener('click', () => {
+      document.getElementById('q4').style.border = '3px solid limegreen'
+      document.getElementById('result-41').style.color = 'limegreen'
+      document.getElementById('result-41').innerHTML = 'Correct!'
+      document.getElementById('showanswer4').removeChild(showAnswer4)
+    })
+  }
+    
+    
+    
+    
+    </script>
+</head>
+<body>
+    <div class="q1">
+        <h2>Question 1:</h2><br>
+        <h3>What mountain is closest to Seattle?</h3><br>
+        <div id="q1a1">
+            <label for='option-1'>
+                <input type='radio' name='option' value='6' id='option-1'/>
+                Mt.Baker</label>
+            <span id='result-11'></span>
+        </div>
+        <div id="q1a2">
+            <label for='option-2'>
+                <input type='radio' name='option' value='6' id='option-2'/>
+                Mt.Rainier</label>
+            <span id='result-12'></span>
+            <button type='button' onclick='displayAnswer1()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+            <a id="showanswer1"></a>
+        </div>
+        
+    </div>
+
+    <div class="q2">
+        <h2>Question 2:</h2><br>
+        <h3>What state is known for farming potatoes?</h3><br>
+        <div id="q2a1">
+            <label for='option-3'>
+                <input type='radio' name='option' value='6' id='option-3'/>
+                Wisconsin</label>
+                <span id='result-21'></span>
+        </div>
+        <div id="q2a2">
+            <label for='option-4'>
+                <input type='radio' name='option' value='6' id='option-4'/>
+                Idaho</label>
+                <span id='result-22'></span>
+        </div>
+        <button type='button' onclick='displayAnswer2()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+        <a id="showanswer2"></a>
+        
+    </div>
+
+    <div class="q3">
+        <h2>Question 3:</h2><br>
+        <h3>Are cows pets?</h3><br>
+        <div id="q3a1">
+            <label for='option-5'>
+                <input type='radio' name='option' value='6' id='option-5'/>
+                True</label>
+                <span id='result-31'></span>
+        </div>
+        <div id="q3a2">
+            <label for='option-2'>
+                <input type='radio' name='option' value='6' id='option-6'/>
+                False</label>
+                <span id='result-32'></span>
+        </div>
+        <button type='button' onclick='displayAnswer3()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+        <a id="showanswer3"></a>
+    </div>
+
+        <div class="q4">
+            <h2>Question 4:</h2><br>
+            <h3>Which way do hurricanes rotate in the northern hemisphere?</h3><br>
+            <div id="q4a1">
+                <label for='option-7'>
+                    <input type='radio' name='option' value='6' id='option-7'/>
+                    Counter clockwise</label>
+                    <span id='result-41'></span>
+            </div>
+            <div id="q4a2">
+                <label for='option-8'>
+                    <input type='radio' name='option' value='6' id='option-8'/>
+                    Clockwise</label>
+                    <span id='result-42'></span>
+            </div>
+            <button type='button' onclick='displayAnswer4()' style='width: 100px; height: 40px; border-radius: 3px; background-color: lightblue; font-weight: 700;'>Submit</button>
+            <a id="showanswer4"></a>
+        </div>
+        
+   
+    
+    
+</body>
+</html>
